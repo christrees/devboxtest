@@ -4,13 +4,16 @@ MS-test
 =======
 
 Goal: Baseline template for MS-devbox protractor/cucumber/page-object testing.
+
 Test: Clone this and run the test.
 
 Setup
 -----
 
+```
 git clone /Users/cat/Sites/15_CAT_MS/MS-test/.git
 sudo npm install
+```
 
 Test
 ----
