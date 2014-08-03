@@ -1,0 +1,30 @@
+{
+  "name": "devboxTest",
+  "description": "Test Automation for devbox",
+  "homepage": "http://10.2.5.104/~cat/15_CAT_MS/MS-test/",
+  "keywords": [
+    "angular",
+    "test",
+    "testing",
+    "webdriver",
+    "webdriverjs",
+    "selenium"
+  ],
+  "author": "Chris Trees <ctrees@mailserviceslc.com>",
+  "dependencies": {
+    "astrolabe": "^0.3.4-alpha",
+    "chai": "^1.9.1",
+    "chai-as-promised": "^4.1.1",
+    "protractor": "~1.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://10.2.5.104/~cat/repo/MS-test.git"
+  },
+  "bin": {
+    "protractor": "bin/protractor",
+    "webdriver-manager": "bin/webdriver-manager"
+  },
+  "license": "MIT",
+  "version": "1.0.0"
+}
