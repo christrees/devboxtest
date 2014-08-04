@@ -221,14 +221,11 @@ ms1047-imac:MS-devbox cat$
   1. __Last Step:__ Manual Test of the [msllc VagrantCloud] install
 1. Auto Test of the [msllc VagrantCloud] install
   1. cd to working dir
-
 ```
 ms1047-imac:MS-devbox cat$ pwd
 /Users/cat/Desktop/MS-devbox
 ```
-
   1. Clone the test template [devbox e2e source]
-
 ```
 ms1047-imac:MS-devbox cat$ git clone https://github.com/christrees/devboxtest.git
 Cloning into 'devboxtest'...
@@ -252,7 +249,7 @@ ms1047-imac:MS-devbox cat$
 1. __Last Step:__ Verify Install and Develper Workflow Section
 
 ### References
-1. Tool Links
+#### Tool Links
   1. [Online Markup Editor] http://dillinger.io/#
   1. [Google Chrome] https://www.google.com/intl/en_us/chrome/browser/
   1. [FireFox] https://www.mozilla.org/en-US/firefox/new/
@@ -263,23 +260,23 @@ ms1047-imac:MS-devbox cat$
   1. [Vagrant] http://www.vagrantup.com/downloads.html
   1. [VagrantCloud] https://vagrantcloud.com/
   1. __Last Step -__ Tool Links __- Section__
-1. Internal Sandbox Testing Links
-  1. [msllc devbox]: https://vagrantcloud.com/mailserviceslc/devbox
-  1. [msllc devbox Provider]: https://vagrantcloud.com/mailserviceslc/devbox/version/1/provider/virtualbox/edit
-  1. [msllc devbox package]: http://10.2.5.104/~cat/15_CAT_MS/MS-jonck/package.box
-  1. [devbox login]: http://127.0.0.1:7999/#/login "http://127.0.0.1:7999/#/login"
-  1. [devbox home]: http://127.0.0.1:7999/#/ "http://127.0.0.1:7999/#/"
-  1. [devbox view]: http://127.0.0.1:7999/#/view "http://127.0.0.1:7999/#/view"
-  1. [devbox show]: http://127.0.0.1:7999/#/list/view/1/documents "http://127.0.0.1:7999/#/list/view/1/documents"
-  1. [devbox e2e source]: https://github.com/christrees/devboxtest "https://github.com/christrees/devboxtest"
+#### Internal Sandbox Testing Links
+  1. [msllc devbox] https://vagrantcloud.com/mailserviceslc/devbox
+  1. [msllc devbox Provider] https://vagrantcloud.com/mailserviceslc/devbox/version/1/provider/virtualbox/edit
+  1. [msllc devbox package] http://10.2.5.104/~cat/15_CAT_MS/MS-jonck/package.box
+  1. [devbox login] http://127.0.0.1:7999/#/login "http://127.0.0.1:7999/#/login"
+  1. [devbox home] http://127.0.0.1:7999/#/ "http://127.0.0.1:7999/#/"
+  1. [devbox view] http://127.0.0.1:7999/#/view "http://127.0.0.1:7999/#/view"
+  1. [devbox show] http://127.0.0.1:7999/#/list/view/1/documents "http://127.0.0.1:7999/#/list/view/1/documents"
+  1. [devbox e2e source] https://github.com/christrees/devboxtest "https://github.com/christrees/devboxtest"
   1. __Last Step -__ Internal Sandbox Testing Links __- Section__
-1. External Libs
-  1. [Protractor]: https://github.com/angular/protractor "https://github.com/angular/protractor"
-  1. [Protractor npm]: https://www.npmjs.org/package/protractor "https://www.npmjs.org/package/protractor"
-  1. [Protractor webdriver API]: https://github.com/angular/protractor/blob/master/docs/api.md#api-protractor-prototype-findelement "https://github.com/angular/protractor/blob/master/docs/api.md#api-protractor-prototype-findelement"
-  1. [PageObject Example]: https://github.com/onekilo79/protractor-astrolabe-example "https://github.com/onekilo79/protractor-astrolabe-example"
-  1. [PageObject Astrolabe Lib]: https://github.com/stuplum/astrolabe "https://github.com/stuplum/astrolabe"
-  1. [Cucumber Given-When-Then]: https://github.com/cucumber/cucumber/wiki/Given-When-Then "https://github.com/cucumber/cucumber/wiki/Given-When-Then"
+#### External Libs
+  1. [Protractor] https://github.com/angular/protractor "https://github.com/angular/protractor"
+  1. [Protractor npm] https://www.npmjs.org/package/protractor "https://www.npmjs.org/package/protractor"
+  1. [Protractor webdriver API] https://github.com/angular/protractor/blob/master/docs/api.md#api-protractor-prototype-findelement "https://github.com/angular/protractor/blob/master/docs/api.md#api-protractor-prototype-findelement"
+  1. [PageObject Example] https://github.com/onekilo79/protractor-astrolabe-example "https://github.com/onekilo79/protractor-astrolabe-example"
+  1. [PageObject Astrolabe Lib] https://github.com/stuplum/astrolabe "https://github.com/stuplum/astrolabe"
+  1. [Cucumber Given-When-Then] https://github.com/cucumber/cucumber/wiki/Given-When-Then "https://github.com/cucumber/cucumber/wiki/Given-When-Then"
   1. __Last Step -__ External Libs __- Section__
 1. __Last Step -__ References Section __- Section__
 
