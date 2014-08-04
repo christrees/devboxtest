@@ -253,15 +253,15 @@ ms1047-imac:MS-devbox cat$
 
 ### References
 1. Tool Links
-  1. [Online Markup Editor]: http://dillinger.io/#
-  1. [Google Chrome]: https://www.google.com/intl/en_us/chrome/browser/
-  1. [FireFox]: https://www.mozilla.org/en-US/firefox/new/
-  1. [Sublime Text 3]: http://www.sublimetext.com/3
-  1. [NodeJS]: http://nodejs.org/
-  1. [Skype]: http://www.skype.com/en/download-skype/skype-for-mac/downloading/
-  1. [VirtualBox]: https://www.virtualbox.org/wiki/Downloads
-  1. [Vagrant]: http://www.vagrantup.com/downloads.html
-  1. [VagrantCloud]: https://vagrantcloud.com/
+  1. [Online Markup Editor] http://dillinger.io/#
+  1. [Google Chrome] https://www.google.com/intl/en_us/chrome/browser/
+  1. [FireFox] https://www.mozilla.org/en-US/firefox/new/
+  1. [Sublime Text 3] http://www.sublimetext.com/3
+  1. [NodeJS] http://nodejs.org/
+  1. [Skype] http://www.skype.com/en/download-skype/skype-for-mac/downloading/
+  1. [VirtualBox] https://www.virtualbox.org/wiki/Downloads
+  1. [Vagrant] http://www.vagrantup.com/downloads.html
+  1. [VagrantCloud] https://vagrantcloud.com/
   1. __Last Step -__ Tool Links __- Section__
 1. Internal Sandbox Testing Links
   1. [msllc devbox]: https://vagrantcloud.com/mailserviceslc/devbox
