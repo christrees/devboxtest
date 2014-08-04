@@ -19,14 +19,19 @@ Test
 ----
 
 1. Start Vagrant devbox
+
 ```
 vagrant up
 ```
+
 2. Start Selenium Server
+
 ```
 webdriver-manager start
 ```
+
 3. Test
+
 ```
 CPAMC-iMac-2:MS-test cat$ protractor protactor.config.js 
 Using the selenium server at http://localhost:4444/wd/hub
@@ -34,7 +39,9 @@ Using the selenium server at http://localhost:4444/wd/hub
 5 steps (5 passed)
 CPAMC-iMac-2:MS-test cat$ 
 ```
+
 4. Debug Mode
+
 ```
 CPAMC-iMac-2:MS-test cat$ protractor debug protactor.config.js 
 Using the selenium server at http://localhost:4444/wd/hub
@@ -80,6 +87,7 @@ MS1047-IMAC Specs
  * ATI Radeon HD 4670 256MB
  * SN: QP9500Q8895
  * OS X 10.9.4 (13E28)
+
 ```
   Model Name:	iMac
   Model Identifier:	iMac10,1
@@ -107,12 +115,14 @@ MS1047-IMAC Specs
 1. [VagrantCloud] mailserviceslc - ctrees@mailserviceslc.com - Gray9Test
 1. Package box from working account on CPAMC-iMac-2
   1. cd to /Users/cat/Sites/15_CAT_MS/MS-jonck and run:
+
 ```
 CPAMC-iMac-2:MS-jonck cat$ vagrant package
 ==> default: Clearing any previously set forwarded ports...
 ==> default: Exporting VM...
 ==> default: Compressing package to: /Users/cat/Sites/15_CAT_MS/MS-jonck/package.box
 ```
+
   1. Create [msllc VagrantCloud]
   1. Point provider [msllc VagrantCloud Provider] to [msllc devbox Package]
   1. __Last Step -__ Package box from working account on CPAMC-iMac-2 __- Section__
@@ -120,6 +130,7 @@ CPAMC-iMac-2:MS-jonck cat$ vagrant package
 1. Install [msllc VagrantCloud]
   1. Create working directory /Users/cat/Desktop/MS-devbox
   1. cd into directory and run 'vagrant init mailserviceslc/devbox':
+
 ```
 ms1047-imac:MS-devbox cat$ vagrant init mailserviceslc/devbox
 A `Vagrantfile` has been placed in this directory. You are now
@@ -160,13 +171,17 @@ ms1047-imac:MS-devbox cat$ pwd
 /Users/cat/Desktop/MS-devbox
 ms1047-imac:MS-devbox cat$ 
 ```
+
   1. Modify ports to forward in Vagrantfile as such:
+
 ```
   # config.vm.network "forwarded_port", guest: 80, host: 8080
    config.vm.network "forwarded_port", guest: 8000, host: 8000
    config.vm.network "forwarded_port", guest: 7999, host: 7999
 ```
+
   1. Restart Vagrant 'vagrant halt' then 'vagrant up'
+
 ```
 ms1047-imac:MS-devbox cat$ vagrant halt
 ==> default: Attempting graceful shutdown of VM...
@@ -196,6 +211,7 @@ Bringing machine 'default' up with 'virtualbox' provider...
 ==> default: to force provisioning. Provisioners marked to run always will still run.
 ms1047-imac:MS-devbox cat$ 
 ```
+
   1. __Last Step:__ Install Vagrant Project [https://vagrantcloud.com/mailserviceslc/devbox]
 1. Manual Test of the [msllc VagrantCloud] install
   1. Browse to [devbox login] should get login.
@@ -205,11 +221,14 @@ ms1047-imac:MS-devbox cat$
   1. __Last Step:__ Manual Test of the [msllc VagrantCloud] install
 1. Auto Test of the [msllc VagrantCloud] install
   1. cd to working dir
+
 ```
 ms1047-imac:MS-devbox cat$ pwd
 /Users/cat/Desktop/MS-devbox
 ```
+
   1. Clone the test template [devbox e2e source]
+
 ```
 ms1047-imac:MS-devbox cat$ git clone https://github.com/christrees/devboxtest.git
 Cloning into 'devboxtest'...
@@ -220,6 +239,7 @@ Unpacking objects: 100% (12/12), done.
 Checking connectivity... done.
 ms1047-imac:MS-devbox cat$ 
 ```
+
   1. npm install - (woops fogot to install node.js)
   1. __Last Step:__ Auto Test of the [msllc VagrantCloud] install
 1. __Last Step:__ Installs Section
@@ -264,6 +284,7 @@ ms1047-imac:MS-devbox cat$
 1. __Last Step -__ References Section __- Section__
 
 <!-- Links -->
+
 [Online Markup Editor]: http://dillinger.io/#
 [Google Chrome]: https://www.google.com/intl/en_us/chrome/browser/
 [FireFox]: https://www.mozilla.org/en-US/firefox/new/
@@ -291,6 +312,7 @@ ms1047-imac:MS-devbox cat$
 [Cucumber Given-When-Then]: https://github.com/cucumber/cucumber/wiki/Given-When-Then "https://github.com/cucumber/cucumber/wiki/Given-When-Then"
 
 <!-- Template copy pase -->
+
 ### Copy Paste Section Template
 1. Some Step
   1. Some SubStep
