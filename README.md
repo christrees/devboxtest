@@ -248,6 +248,9 @@ ms1047-imac:MS-devbox cat$
 1. Next step
 1. __Last Step:__ Verify Install and Develper Workflow Section
 
+ms  ssh://git@jira:7999/asf/devbox.git (fetch)
+ms  ssh://git@jira:7999/asf/devbox.git (push)
+
 ### References
 #### Tool Links
   1. [Online Markup Editor] http://dillinger.io/#
@@ -317,6 +320,7 @@ ms1047-imac:MS-devbox cat$
 1. Next step
 1. __Last Step -__ Section Template __- Section__
 
+<html>
 <svg width="640" height="480" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
  <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
  <g>
@@ -431,3 +435,4 @@ ms1047-imac:MS-devbox cat$
   <text id="svg_92" stroke="#000000" transform="matrix(0.8727754354476929,0,0,0.8139534592628479,3.450966313481331,18.13953772187233) " xml:space="preserve" text-anchor="middle" font-family="serif" font-size="24" y="71.74285" x="131.10479" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" fill="#ffff00">Define</text>
  </g>
 </svg>
+</html>
