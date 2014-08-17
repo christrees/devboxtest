@@ -24,7 +24,7 @@ Feature: Running Cucumber with Protractor
     | customer_user | test | http://127.0.0.1:7999/#/ |
     | customer_user | notpass | http://127.0.0.1:7999/#/login?returnTo=%2Flogin |
 
-  @dev
+  #@dev
   Scenario Outline: Navigate to View
     Given I am on the <currentPage> page as <user> with <password>
     When I click <navLink> 

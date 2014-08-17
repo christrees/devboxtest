@@ -56,4 +56,14 @@ module.exports = function() {
       expect(browser.getTitle()).to.eventually.equal(page).and.notify(next);
     });
 
+    this.Given(/^I am on the (.*) page as (.*) with (.*)$/, function (currentPage, user, password, next) {
+      // Write code here that turns the phrase above into concrete actions
+      next();
+    });
+
+    this.When(/^I click (.*)$/, function (navLink, next) {
+      // Write code here that turns the phrase above into concrete actions
+      next();
+    });
+
 };

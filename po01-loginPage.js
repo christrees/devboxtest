@@ -19,6 +19,7 @@ module.exports = Page.create({
                 page.InvalidLoginException.thro(username + ', ' + password + ' is not valid');
             }
         });
-*/
-    } }
+        */
+    } },
+    signOut: { }
 });
