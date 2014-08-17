@@ -241,8 +241,8 @@ ms1047-imac:MS-devbox cat$
   1. __Last Step:__ Auto Test of the [msllc VagrantCloud] install
 1. __Last Step:__ Installs Section
 
-![Alt text](https://rawgithub.com/christrees/devboxtest/02_ref_img_01_TestTemplateDiagram.svg)
-<img src="https://rawgithub.com/christrees/devboxtest/02_ref_img_01_TestTemplateDiagram.svg">
+![Alt text](https://rawgithub.com/christrees/devboxtest/master/02_ref_img_01_TestTemplateDiagram.svg)
+<img src="https://rawgithub.com/christrees/devboxtest/master/02_ref_img_01_TestTemplateDiagram.svg">
 
 ### Verify Install and Develper Workflow
 1. Some Step
