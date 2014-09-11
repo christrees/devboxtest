@@ -1,12 +1,10 @@
 README.md
 
-MS-test
+ionic-e2e-test
 =======
 
 Goal: Baseline template for ionic protractor/cucumber/page-object testing.
-
 Test: Clone this, run test get green.
-
 Setup devboxtest
 -----
 
@@ -36,17 +34,16 @@ catmini:Desktop cat$ mkdir catonic
 catmini:Desktop cat$ cd catonic/
 catmini:catonic cat$ vagrant init drifty/ionic-android
 ```
-
-[Create basic ionic template][ionic-project]
-
 Edit Vagrant port map in Vagrantfile:
-
 ```
   config.vm.network "forwarded_port", guest: 8100, host: 8100
   config.vm.network "forwarded_port", guest: 35729, host: 35729
 ```
-
-Fire up Vagrant, create catapp ionic project, fire up server
+[Create basic ionic template][ionic-project]
+1. Fire up Vagrant (vagrant up)
+2. ssh vagrant (vagrant ssh)
+3. Create catapp ionic project (icon start catapp sidemenu)
+4. Fire up server (cd catapp; ionic server)
 
 ```
 catmini:catonic cat$ vagrant up
@@ -61,8 +58,7 @@ Running dev server: http://10.0.2.15:8100
 Running live reload server: http://10.0.2.15:35729
 ```
 
-
-# Test Mode
+### Test Mode
 
 ```
 ccatmini:catonic cat$ protractor protactor.config.js 
@@ -71,7 +67,7 @@ Using the selenium server at http://localhost:4444/wd/hub
 5 steps (5 passed)
 ```
 
-# Debug Mode
+### Debug Mode
 
 ```
 catmini:catonic cat$ protractor debug protactor.config.js 
