@@ -3,47 +3,78 @@ README.md
 MS-test
 =======
 
-Goal: Baseline template for MS-devbox protractor/cucumber/page-object testing.
+Goal: Baseline template for ionic protractor/cucumber/page-object testing.
 
-Test: Clone this and run the test.
+Test: Clone this, run test get green.
 
-Setup
+Setup devboxtest
 -----
 
 ```
-git clone /Users/cat/Sites/15_CAT_MS/MS-test/.git
+git clone https://github.com/christrees/devboxtest.git
+cd devboxtest
 sudo npm install
 ```
 
-Test
+Setup devboxtest infrastructure
 ----
 
-1. Start Vagrant devbox
+## Setup and Start Selenium Server
 
 ```
-vagrant up
+catmini:devboxtest cat$ ./node_modules/protractor/bin/webdriver-manager update
+catmini:devboxtest cat$ ./node_modules/protractor/bin/webdriver-manager start
 ```
 
-2. Start Selenium Server
+
+## Setup default ionic
+
+Install Client Template [Ionic Vagrant Install][ionic-box]
 
 ```
-webdriver-manager start
+catmini:Desktop cat$ mkdir catonic
+catmini:Desktop cat$ cd catonic/
+catmini:catonic cat$ vagrant init drifty/ionic-android
 ```
 
-3. Test
+[Create basic ionic template][ionic-project]
+
+Edit Vagrant port map in Vagrantfile:
 
 ```
-CPAMC-iMac-2:MS-test cat$ protractor protactor.config.js 
+  config.vm.network "forwarded_port", guest: 8100, host: 8100
+  config.vm.network "forwarded_port", guest: 35729, host: 35729
+```
+
+Fire up Vagrant, create catapp ionic project, fire up server
+
+```
+catmini:catonic cat$ vagrant up
+catmini:catonic cat$ vagrant ssh
+vagrant@ionic-android:~$ cd /vagrant/
+vagrant@ionic-android:/vagrant$ ls
+README.md  Vagrantfile
+vagrant@ionic-android:/vagrant$ ionic start catapp sidemenu
+vagrant@ionic-android:/vagrant$ cd catapp/
+vagrant@ionic-android:/vagrant/catapp$ ionic serve
+Running dev server: http://10.0.2.15:8100
+Running live reload server: http://10.0.2.15:35729
+```
+
+
+# Test Mode
+
+```
+ccatmini:catonic cat$ protractor protactor.config.js 
 Using the selenium server at http://localhost:4444/wd/hub
 2 scenarios (2 passed)
 5 steps (5 passed)
-CPAMC-iMac-2:MS-test cat$ 
 ```
 
-4. Debug Mode
+# Debug Mode
 
 ```
-CPAMC-iMac-2:MS-test cat$ protractor debug protactor.config.js 
+catmini:catonic cat$ protractor debug protactor.config.js 
 Using the selenium server at http://localhost:4444/wd/hub
 Hit SIGUSR1 - starting debugger agent.
 debugger listening on port 5858
@@ -65,7 +96,7 @@ debug> c
 debug> 2 scenarios (2 passed)
 5 steps (5 passed)
 Error 0
-CPAMC-iMac-2:MS-test cat$ 
+catmini:catonic cat$ 
 ```
 
 <!-- README_MailServiceslcDeveloperSetup.md 
@@ -73,36 +104,6 @@ CPAMC-iMac-2:MS-test cat$
   -- ctrees@mailserviceslc.com
   -- .
 -->
-Mailserviceslc Developer Setup
-==============================
- * __Goal:__ Developer Setup on MS1047-IMAC.
- * __Test:__ Run End to End sandboxed test on this mac.
-
-I want to re-create the testing I have done on another mac, so I created an admin user MS1047-IMAC.
-
-MS1047-IMAC Specs
------------------
- * 3.06 GHz Intel Core 2 Duo
- * 8GB 1067 MHz DDR3
- * ATI Radeon HD 4670 256MB
- * SN: QP9500Q8895
- * OS X 10.9.4 (13E28)
-
-```
-  Model Name:	iMac
-  Model Identifier:	iMac10,1
-  Processor Name:	Intel Core 2 Duo
-  Processor Speed:	3.06 GHz
-  Number of Processors:	1
-  Total Number of Cores:	2
-  L2 Cache:	3 MB
-  Memory:	8 GB
-  Bus Speed:	1.07 GHz
-  Boot ROM Version:	IM101.00CC.B00
-  SMC Version (system):	1.52f9
-  Serial Number (system):	QP**9S
-  Hardware UUID:	EE**915
-```
 
 ### Installs
 1. [Online Markup Editor]
@@ -112,130 +113,9 @@ MS1047-IMAC Specs
 1. [Sublime Text 3]
 1. [NodeJS]
 1. [Vagrant]
-1. [VagrantCloud] mailserviceslc - ctrees@mailserviceslc.com - Gray9Test
-1. Package box from working account on CPAMC-iMac-2
-  1. cd to /Users/cat/Sites/15_CAT_MS/MS-jonck and run:
+1. [VagrantCloud]
 
-```
-CPAMC-iMac-2:MS-jonck cat$ vagrant package
-==> default: Clearing any previously set forwarded ports...
-==> default: Exporting VM...
-==> default: Compressing package to: /Users/cat/Sites/15_CAT_MS/MS-jonck/package.box
-```
 
-  1. Create [msllc VagrantCloud]
-  1. Point provider [msllc VagrantCloud Provider] to [msllc devbox Package]
-  1. __Last Step -__ Package box from working account on CPAMC-iMac-2 __- Section__
-1. Install [VirtualBox]
-1. Install [msllc VagrantCloud]
-  1. Create working directory /Users/cat/Desktop/MS-devbox
-  1. cd into directory and run 'vagrant init mailserviceslc/devbox':
-
-```
-ms1047-imac:MS-devbox cat$ vagrant init mailserviceslc/devbox
-A `Vagrantfile` has been placed in this directory. You are now
-ready to `vagrant up` your first virtual environment! Please read
-the comments in the Vagrantfile as well as documentation on
-`vagrantup.com` for more information on using Vagrant.
-ms1047-imac:MS-devbox cat$ vagrant up
-Bringing machine 'default' up with 'virtualbox' provider...
-==> default: Box 'mailserviceslc/devbox' could not be found. Attempting to find and install...
-    default: Box Provider: virtualbox
-    default: Box Version: >= 0
-==> default: Loading metadata for box 'mailserviceslc/devbox'
-    default: URL: https://vagrantcloud.com/mailserviceslc/devbox
-==> default: Adding box 'mailserviceslc/devbox' (v0.1.0) for provider: virtualbox
-    default: Downloading: https://vagrantcloud.com/mailserviceslc/devbox/version/1/provider/virtualbox.box
-==> default: Successfully added box 'mailserviceslc/devbox' (v0.1.0) for 'virtualbox'!
-==> default: Importing base box 'mailserviceslc/devbox'...
-==> default: Matching MAC address for NAT networking...
-==> default: Checking if box 'mailserviceslc/devbox' is up to date...
-==> default: Setting the name of the VM: MS-devbox_default_1407082135190_38536
-==> default: Clearing any previously set network interfaces...
-==> default: Preparing network interfaces based on configuration...
-    default: Adapter 1: nat
-==> default: Forwarding ports...
-    default: 22 => 2222 (adapter 1)
-==> default: Booting VM...
-==> default: Waiting for machine to boot. This may take a few minutes...
-    default: SSH address: 127.0.0.1:2222
-    default: SSH username: vagrant
-    default: SSH auth method: private key
-    default: Warning: Connection timeout. Retrying...
-    default: Warning: Connection timeout. Retrying...
-==> default: Machine booted and ready!
-==> default: Checking for guest additions in VM...
-==> default: Mounting shared folders...
-    default: /vagrant => /Users/cat/Desktop/MS-devbox
-ms1047-imac:MS-devbox cat$ pwd
-/Users/cat/Desktop/MS-devbox
-ms1047-imac:MS-devbox cat$ 
-```
-
-  1. Modify ports to forward in Vagrantfile as such:
-
-```
-  # config.vm.network "forwarded_port", guest: 80, host: 8080
-   config.vm.network "forwarded_port", guest: 8000, host: 8000
-   config.vm.network "forwarded_port", guest: 7999, host: 7999
-```
-
-  1. Restart Vagrant 'vagrant halt' then 'vagrant up'
-
-```
-ms1047-imac:MS-devbox cat$ vagrant halt
-==> default: Attempting graceful shutdown of VM...
-ms1047-imac:MS-devbox cat$ vagrant up
-Bringing machine 'default' up with 'virtualbox' provider...
-==> default: Checking if box 'mailserviceslc/devbox' is up to date...
-==> default: Clearing any previously set forwarded ports...
-==> default: Clearing any previously set network interfaces...
-==> default: Preparing network interfaces based on configuration...
-    default: Adapter 1: nat
-==> default: Forwarding ports...
-    default: 8000 => 8000 (adapter 1)
-    default: 7999 => 7999 (adapter 1)
-    default: 22 => 2222 (adapter 1)
-==> default: Booting VM...
-==> default: Waiting for machine to boot. This may take a few minutes...
-    default: SSH address: 127.0.0.1:2222
-    default: SSH username: vagrant
-    default: SSH auth method: private key
-    default: Warning: Connection timeout. Retrying...
-    default: Warning: Connection timeout. Retrying...
-==> default: Machine booted and ready!
-==> default: Checking for guest additions in VM...
-==> default: Mounting shared folders...
-    default: /vagrant => /Users/cat/Desktop/MS-devbox
-==> default: Machine already provisioned. Run `vagrant provision` or use the `--provision`
-==> default: to force provisioning. Provisioners marked to run always will still run.
-ms1047-imac:MS-devbox cat$ 
-```
-
-  1. __Last Step:__ Install Vagrant Project [https://vagrantcloud.com/mailserviceslc/devbox]
-1. Manual Test of the [msllc VagrantCloud] install
-  1. Browse to [devbox login] should get login.
-  1. Login with customer_user test should get home page [devbox home].
-  1. Click on View should get test01 submitter [devbox view].
-  1. Click on Show should get a list of 2 documents [devbox show].
-  1. __Last Step:__ Manual Test of the [msllc VagrantCloud] install
-1. Auto Test of the [msllc VagrantCloud] install
-  1. cd to working dir
-```
-ms1047-imac:MS-devbox cat$ pwd
-/Users/cat/Desktop/MS-devbox
-```
-  1. Clone the test template [devbox e2e source]
-```
-ms1047-imac:MS-devbox cat$ git clone https://github.com/christrees/devboxtest.git
-Cloning into 'devboxtest'...
-remote: Counting objects: 12, done.
-remote: Compressing objects: 100% (9/9), done.
-remote: Total 12 (delta 2), reused 12 (delta 2)
-Unpacking objects: 100% (12/12), done.
-Checking connectivity... done.
-ms1047-imac:MS-devbox cat$ 
-```
 
   1. npm install - (woops fogot to install node.js)
   1. __Last Step:__ Auto Test of the [msllc VagrantCloud] install
@@ -250,9 +130,6 @@ ms1047-imac:MS-devbox cat$
   1. __Last Step:__ Some Step
 1. Next step
 1. __Last Step:__ Verify Install and Develper Workflow Section
-
-ms  ssh://git@jira:7999/asf/devbox.git (fetch)
-ms  ssh://git@jira:7999/asf/devbox.git (push)
 
 ### References
 #### Tool Links
@@ -287,6 +164,10 @@ ms  ssh://git@jira:7999/asf/devbox.git (push)
 1. __Last Step -__ References Section __- Section__
 
 <!-- Links -->
+
+[ionic-box]: https://github.com/driftyco/ionic-box
+[ionic-project]: http://ionicframework.com/getting-started/
+[ionic-catapp]: http://127.0.0.1:8100/
 
 [Online Markup Editor]: http://dillinger.io/#
 [Google Chrome]: https://www.google.com/intl/en_us/chrome/browser/
