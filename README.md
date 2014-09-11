@@ -111,21 +111,18 @@ catmini:catonic cat$
 1. [Vagrant]
 1. [VagrantCloud]
 
+![TestTemplateDiagram](https://rawgithub.com/christrees/devboxtest/master/02_ref_img_01_TestTemplateDiagram.svg)
 
+![TestInfrastructureDiagram](https://rawgithub.com/christrees/devboxtest/master/02_ref_img_02_TestInfrastructureDiagram.svg)
 
-  1. npm install - (woops fogot to install node.js)
-  1. __Last Step:__ Auto Test of the [msllc VagrantCloud] install
-1. __Last Step:__ Installs Section
-
-![Alt text](https://rawgithub.com/christrees/devboxtest/master/02_ref_img_01_TestTemplateDiagram.svg)
-<img src="https://rawgithub.com/christrees/devboxtest/master/02_ref_img_01_TestTemplateDiagram.svg">
-
+<!--
 ### Verify Install and Develper Workflow
 1. Some Step
   1. Some SubStep
   1. __Last Step:__ Some Step
 1. Next step
 1. __Last Step:__ Verify Install and Develper Workflow Section
+-->
 
 ### References
 #### Tool Links
@@ -139,14 +136,6 @@ catmini:catonic cat$
   1. [Vagrant] http://www.vagrantup.com/downloads.html
   1. [VagrantCloud] https://vagrantcloud.com/
   1. __Last Step -__ Tool Links __- Section__
-#### Internal Sandbox Testing Links
-  1. [msllc devbox] https://vagrantcloud.com/mailserviceslc/devbox
-  1. [msllc devbox Provider] https://vagrantcloud.com/mailserviceslc/devbox/version/1/provider/virtualbox/edit
-  1. [msllc devbox package] http://10.2.5.104/~cat/15_CAT_MS/MS-jonck/package.box
-  1. [devbox login] http://127.0.0.1:7999/#/login "http://127.0.0.1:7999/#/login"
-  1. [devbox home] http://127.0.0.1:7999/#/ "http://127.0.0.1:7999/#/"
-  1. [devbox view] http://127.0.0.1:7999/#/view "http://127.0.0.1:7999/#/view"
-  1. [devbox show] http://127.0.0.1:7999/#/list/view/1/documents "http://127.0.0.1:7999/#/list/view/1/documents"
   1. [devbox e2e source] https://github.com/christrees/devboxtest "https://github.com/christrees/devboxtest"
   1. __Last Step -__ Internal Sandbox Testing Links __- Section__
 #### External Libs
@@ -175,13 +164,6 @@ catmini:catonic cat$
 [Vagrant]: http://www.vagrantup.com/downloads.html
 [VagrantCloud]: https://vagrantcloud.com/
 
-[msllc devbox]: https://vagrantcloud.com/mailserviceslc/devbox
-[msllc devbox Provider]: https://vagrantcloud.com/mailserviceslc/devbox/version/1/provider/virtualbox/edit
-[msllc devbox package]: http://10.2.5.104/~cat/15_CAT_MS/MS-jonck/package.box
-[devbox login]: http://127.0.0.1:7999/#/login "http://127.0.0.1:7999/#/login"
-[devbox home]: http://127.0.0.1:7999/#/ "http://127.0.0.1:7999/#/"
-[devbox view]: http://127.0.0.1:7999/#/view "http://127.0.0.1:7999/#/view"
-[devbox show]: http://127.0.0.1:7999/#/list/view/1/documents "http://127.0.0.1:7999/#/list/view/1/documents"
 [devbox e2e source]: https://github.com/christrees/devboxtest "https://github.com/christrees/devboxtest"
 
 [Protractor]: https://github.com/angular/protractor "https://github.com/angular/protractor"
@@ -191,7 +173,7 @@ catmini:catonic cat$
 [PageObject Astrolabe Lib]: https://github.com/stuplum/astrolabe "https://github.com/stuplum/astrolabe"
 [Cucumber Given-When-Then]: https://github.com/cucumber/cucumber/wiki/Given-When-Then "https://github.com/cucumber/cucumber/wiki/Given-When-Then"
 
-<!-- Template copy pase -->
+<!-- Template copy pase 
 
 ### Copy Paste Section Template
 1. Some Step
@@ -199,3 +181,5 @@ catmini:catonic cat$
   1. __Last Step -__ Some Step __- Section__
 1. Next step
 1. __Last Step -__ Section Template __- Section__
+
+-->
